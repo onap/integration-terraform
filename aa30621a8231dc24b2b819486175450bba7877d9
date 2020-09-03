@@ -33,6 +33,29 @@
       "revId": "aa30621a8231dc24b2b819486175450bba7877d9",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7f4e910c_d00c7bf7",
+        "filename": "terragrunt/openlab/RegionOne/stage/kubernetes/terragrunt.hcl",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 5097
+      },
+      "writtenOn": "2020-09-03T11:54:39Z",
+      "side": 1,
+      "message": "I noticed that in all terragrunt config files you\u0027re referencing some artifacts from external source, which is your interal repo in this case, and the code checkout fails because it\u0027s password protected...\n\nterragrunt/openlab/RegionOne$ terragrunt validate-all\n(...)\n[terragrunt] [/home/bartek/terraform/terragrunt/openlab/RegionOne/stage/keypair] 2020/09/03 13:49:32 Downloading Terraform configurations from git::ssh://git@gitlab.yoppworks.com/onap/openlab.git?ref\u003d0.1.7 into /home/bartek/terraform/terragrunt/openlab/RegionOne/stage/keypair/.terragrunt-cache/Ic-fFjg8B-CIAdlqEFXcsI_7O8Y/wtB6CZiK2ChFR8TpcBWO1mZzooY\ngit@gitlab.yoppworks.com\u0027s password: \n\n\nI think that referencing external resources alone isn\u0027t the best idea. Do you think it would be possible to place those in community repo?",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 24,
+        "endChar": 1
+      },
+      "revId": "aa30621a8231dc24b2b819486175450bba7877d9",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
