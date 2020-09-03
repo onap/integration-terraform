@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "e106dde9_9a9b402e",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 6627
+      },
+      "writtenOn": "2020-09-03T19:25:56Z",
+      "side": 1,
+      "message": "I deployed Frankfurt ONAP with this script. Each version of ONAP relies on different versions of K8s and k8s version can be configured using env.hcl file",
+      "parentUuid": "ecd9b54b_48b111b6",
+      "revId": "aa30621a8231dc24b2b819486175450bba7877d9",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6034cf3f_80a306ea",
         "filename": "README.md",
         "patchSetId": 1
@@ -47,6 +65,30 @@
       "writtenOn": "2020-09-03T11:54:39Z",
       "side": 1,
       "message": "I noticed that in all terragrunt config files you\u0027re referencing some artifacts from external source, which is your interal repo in this case, and the code checkout fails because it\u0027s password protected...\n\nterragrunt/openlab/RegionOne$ terragrunt validate-all\n(...)\n[terragrunt] [/home/bartek/terraform/terragrunt/openlab/RegionOne/stage/keypair] 2020/09/03 13:49:32 Downloading Terraform configurations from git::ssh://git@gitlab.yoppworks.com/onap/openlab.git?ref\u003d0.1.7 into /home/bartek/terraform/terragrunt/openlab/RegionOne/stage/keypair/.terragrunt-cache/Ic-fFjg8B-CIAdlqEFXcsI_7O8Y/wtB6CZiK2ChFR8TpcBWO1mZzooY\ngit@gitlab.yoppworks.com\u0027s password: \n\n\nI think that referencing external resources alone isn\u0027t the best idea. Do you think it would be possible to place those in community repo?",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 24,
+        "endChar": 1
+      },
+      "revId": "aa30621a8231dc24b2b819486175450bba7877d9",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "253ab108_62abb395",
+        "filename": "terragrunt/openlab/RegionOne/stage/kubernetes/terragrunt.hcl",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 6627
+      },
+      "writtenOn": "2020-09-03T19:25:56Z",
+      "side": 1,
+      "message": "I will fix the code, it should point to Gerrit not internal repo.",
+      "parentUuid": "7f4e910c_d00c7bf7",
       "range": {
         "startLine": 22,
         "startChar": 0,
