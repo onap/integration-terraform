@@ -134,6 +134,30 @@
       "revId": "aa30621a8231dc24b2b819486175450bba7877d9",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "45d304ab_294b0e40",
+        "filename": "terragrunt/openlab/RegionOne/stage/kubernetes/terragrunt.hcl",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 6627
+      },
+      "writtenOn": "2020-09-03T23:33:02Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "253ab108_62abb395",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 24,
+        "endChar": 1
+      },
+      "revId": "aa30621a8231dc24b2b819486175450bba7877d9",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
