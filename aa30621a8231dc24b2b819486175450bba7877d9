@@ -16,6 +16,23 @@
       "revId": "aa30621a8231dc24b2b819486175450bba7877d9",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6034cf3f_80a306ea",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 5097
+      },
+      "writtenOn": "2020-09-03T09:22:06Z",
+      "side": 1,
+      "message": "Could you please state here on which release of Openstack was this code tested?",
+      "revId": "aa30621a8231dc24b2b819486175450bba7877d9",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
