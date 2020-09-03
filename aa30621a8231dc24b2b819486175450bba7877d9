@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ecd9b54b_48b111b6",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 5097
+      },
+      "writtenOn": "2020-09-03T08:14:25Z",
+      "side": 1,
+      "message": "Yoonsoon: is this work really based on casablanca release or the link should be updated?",
+      "revId": "aa30621a8231dc24b2b819486175450bba7877d9",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
