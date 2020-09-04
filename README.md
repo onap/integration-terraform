@@ -51,11 +51,8 @@ Please, refer to the following [link](https://docs.openstack.org/ocata/user-guid
 ####  Building all modules for an environment
 Move to an environmental level folder, e.g stage.
 Then run `terragrunt apply-all` followed by `terraform init`
-If you run the command above for the first time and your version of Terraform is <= 0.13-beta, You may end up the error below
-`Provider "rke" not available for installation.`
-You have to manually download the `rke` provider and copy it under a Terraform's cached plug-in directory.
-After copying the rke provider, move to the `rancher` directory and run `terragrunt init`.
-Please, refer to the following [link](https://github.com/rancher/terraform-provider-rke#installing-the-provider) for details.
+
+Terraform version 0.13 is required.
 
 https://github.com/gruntwork-io/terragrunt-infrastructure-live-example#deploying-all-modules-in-a-region
 
