@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "0ed3673d_b7b1b31b",
+        "filename": "openlab/modules/kubernetes/kubernetes/versions.tf",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 6627
+      },
+      "writtenOn": "2020-09-04T18:53:45Z",
+      "side": 1,
+      "message": "openstack \u003d {\n      source \u003d \"terraform-providers/openstack\"\n  }",
+      "revId": "2b81d469c1e2273f5cf25f0229b648b08ff61444",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "515a11a3_fbf07546",
         "filename": "openlab/modules/kubernetes/rancher/versions.tf",
         "patchSetId": 1
