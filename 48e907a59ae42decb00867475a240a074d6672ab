@@ -22,6 +22,30 @@
       "revId": "48e907a59ae42decb00867475a240a074d6672ab",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "06c8a077_bbd332e3",
+        "filename": "README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 5097
+      },
+      "writtenOn": "2020-09-09T06:32:18Z",
+      "side": 1,
+      "message": "Yoonsoon Jahng: could you please fix the doc here and we could merge all the changes in the chain.",
+      "parentUuid": "ebd8133f_837c45d6",
+      "range": {
+        "startLine": 29,
+        "startChar": 84,
+        "endLine": 29,
+        "endChar": 102
+      },
+      "revId": "48e907a59ae42decb00867475a240a074d6672ab",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
