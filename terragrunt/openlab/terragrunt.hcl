@@ -9,14 +9,14 @@ locals {
   environment_vars = read_terragrunt_config(find_in_parent_folders("env.hcl"))
 
   # Extract the variables we need for easy access
-  user_name    = local.account_vars.locals.user_name
-  password     = local.account_vars.locals.password
-  auth_url     = local.account_vars.locals.auth_url
-  project_id   = local.account_vars.locals.project_id
-  backend      = local.account_vars.locals.backend
+  user_name     = local.account_vars.locals.user_name
+  password      = local.account_vars.locals.password
+  auth_url      = local.account_vars.locals.auth_url
+  project_id    = local.account_vars.locals.project_id
+  backend       = local.account_vars.locals.backend
   backend_state = local.account_vars.locals.backend_state
-  region       = local.region_vars.locals.region
-  environment  = local.environment_vars.locals.environment
+  region        = local.region_vars.locals.region
+  environment   = local.environment_vars.locals.environment
 }
 
 remote_state {
@@ -28,16 +28,16 @@ remote_state {
   }
 
   config = {
-    bucket      = "${local.backend_state}"
-    prefix      = "${path_relative_to_include()}/terraform.tfstate"
+    bucket = "${local.backend_state}"
+    prefix = "${path_relative_to_include()}/terraform.tfstate"
   }
 }
 
 # test/terragrunt.hcl
 generate "provider" {
-  path = "provider.tf"
+  path      = "provider.tf"
   if_exists = "overwrite_terragrunt"
-  contents = <<EOF
+  contents  = <<EOF
 provider "openstack" {
   user_name   = "${local.user_name}"
   tenant_name = "${local.user_name}"
@@ -58,7 +58,7 @@ EOF
 # Configure root level variables that all resources can inherit. This is especially helpful with multi-account configs
 # where terraform_remote_state data sources are placed directly into the modules.
 inputs = merge(
-local.account_vars.locals,
-local.region_vars.locals,
-local.environment_vars.locals,
+  local.account_vars.locals,
+  local.region_vars.locals,
+  local.environment_vars.locals,
 )
