@@ -16,6 +16,24 @@
       "revId": "4539392263e327fb6a933a34688e7ff7ab41e72e",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "69f62a6a_1ddedf3f",
+        "filename": "terragrunt/openlab/RegionOne/stage/securitygroup/terragrunt.hcl",
+        "patchSetId": 4
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 6627
+      },
+      "writtenOn": "2020-09-14T15:46:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8df6a097_82bf4be4",
+      "revId": "4539392263e327fb6a933a34688e7ff7ab41e72e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
