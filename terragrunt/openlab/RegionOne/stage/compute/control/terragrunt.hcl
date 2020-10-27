@@ -9,7 +9,7 @@ locals {
 }
 
 terraform {
-  source = "git::https://gerrit.onap.org/r/integration/terraform/openlab/modules/openstack/compute"
+  source = "git::https://gerrit.onap.org/r/integration/terraform//openlab/modules/openstack/compute"
 }
 
 include {
@@ -25,7 +25,7 @@ inputs = {
   environment  = local.environment
   cluster_name = "${local.region}-${local.environment}"
 
-  node_name        = "worker-node"
+  node_name        = "control-node"
   image            = "ubuntu-18.04"
   flavor           = "m1.xlarge"
   floating_ip_pool = "external"
