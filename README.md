@@ -42,6 +42,16 @@ Please, refer to the following [link](https://cloud.google.com/iam/docs/creating
 Second, you need to export Openstack credentials. You can use the openstack.rc file downloaded from your Openstack project.
 Please, refer to the following [link](https://docs.openstack.org/ocata/user-guide/common/cli-set-environment-variables-using-openstack-rc.html) for details.
 
+Finally, check all the environmental variables are set with the `env` command.
+For example,
+``
+GOOGLE_APPLICATION_CREDENTIALS=/path/to/google_credential
+password=OpenstackPassowrd
+user_name=OpenstackUser
+auth_url=http://x.x.x.x:..
+project_id=12345667
+``
+
 #### Fill in files
  - `account.hcl`: Top-level configuration for a cloud account.
  - `region.hcl`: The second level configuration for a region within the cloud
