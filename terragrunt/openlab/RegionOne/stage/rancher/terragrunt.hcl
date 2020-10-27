@@ -18,7 +18,7 @@ locals {
 }
 
 terraform {
-  source = "git::https://gerrit.onap.org/r/integration/terraform/openlab/modules/kubernetes/rancher"
+  source = "git::https://gerrit.onap.org/r/integration/terraform//openlab/modules/kubernetes/rancher"
 }
 
 include {
