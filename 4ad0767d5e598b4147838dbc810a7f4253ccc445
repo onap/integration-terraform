@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "a4f0604f_0d11b859",
+        "filename": "terragrunt/openlab/RegionOne/stage/compute/control/terragrunt.hcl",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 6627
+      },
+      "writtenOn": "2020-10-27T18:29:35Z",
+      "side": 1,
+      "message": "https://github.com/hashicorp/go-getter#subdirectories\n\nAccording to the URL above, go-gether, which is used by Terragrunt to pull out of git repo, sub-directory should have doulbe slashes. I tested and it works. It is a bug at the first place.",
+      "parentUuid": "7cae1f4a_110eb785",
+      "range": {
+        "startLine": 12,
+        "startChar": 64,
+        "endLine": 12,
+        "endChar": 66
+      },
+      "revId": "4ad0767d5e598b4147838dbc810a7f4253ccc445",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "f60114eb_f4b7d05e",
         "filename": "terragrunt/openlab/RegionOne/stage/env.hcl",
         "patchSetId": 2
@@ -36,6 +60,24 @@
       "writtenOn": "2020-10-27T17:37:25Z",
       "side": 1,
       "message": "I don\u0027t quite get this comment? Why are you pointing to external doc not to onap doc?",
+      "revId": "4ad0767d5e598b4147838dbc810a7f4253ccc445",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a00ffa8a_4c1b5cae",
+        "filename": "terragrunt/openlab/RegionOne/stage/env.hcl",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 6627
+      },
+      "writtenOn": "2020-10-27T18:29:35Z",
+      "side": 1,
+      "message": "This Terragrunt scripts leverages `rke` that will install Kubernetes clusters. If you need to update K8s cluster version, you should provide correct version of `rke`.",
+      "parentUuid": "f60114eb_f4b7d05e",
       "revId": "4ad0767d5e598b4147838dbc810a7f4253ccc445",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
