@@ -9,7 +9,7 @@ locals {
 }
 
 terraform {
-  source = "git::https://gerrit.onap.org/r/integration/terraform/openlab/modules/openstack/keypair"
+  source = "git::https://gerrit.onap.org/r/integration/terraform//openlab/modules/openstack/keypair"
 }
 
 include {

@@ -10,7 +10,7 @@ locals {
   ssh_public_key       = "" # OpenSSH formated string is required
   ssh_private_key_path = "" # e.g ~/.ssh/id_rsa
 
-  kubernetes_version      = "v1.15.11-rancher1-2"
+  kubernetes_version      = "v1.15.11-rancher1-2"  # rke version. please, check the correct rke version at https://github.com/rancher/rke/releases/
   kubernetes_user         = "ubuntu"
   kubernetes_cluster_name = "rke_cluster"
 
