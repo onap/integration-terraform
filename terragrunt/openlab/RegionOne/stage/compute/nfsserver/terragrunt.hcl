@@ -9,7 +9,7 @@ locals {
 }
 
 terraform {
-  source = "git::https://gerrit.onap.org/r/integration/terraform/openlab/modules/openstack/compute"
+  source = "git::https://gerrit.onap.org/r/integration/terraform//openlab/modules/openstack/compute"
 }
 
 include {

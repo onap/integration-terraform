@@ -20,7 +20,7 @@ locals {
 }
 
 terraform {
-  source = "git::https://gerrit.onap.org/r/integration/terraform/openlab/modules/kubernetes/kubernetes"
+  source = "git::https://gerrit.onap.org/r/integration/terraform//openlab/modules/kubernetes/kubernetes"
 }
 
 include {

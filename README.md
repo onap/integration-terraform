@@ -14,8 +14,11 @@ This Terragrunt(Terraform) code provides the same infrastructure as you would cr
 ```
 openlab             # Terragrunt scripts to feed configuration into the Terraform modules 
  └ RegionOne        # For multi regions. e.g, us-east-1
-   └ stage          # Environment specific configuration. e.g, QA/Stage/Prod
-     └ resource
+ |  └ stage         # Environment specific configuration. e.g, QA/Stage/Prod
+ |    └ resource
+ └ RegionTwo        # For multi regions. e.g, us-east-1
+   └ Prod           # Environment specific configuration. e.g, QA/Stage/Prod
+     └ resource    
 ```
 
 Infrastrucuture is organized hierarchically in folders.
@@ -32,15 +35,34 @@ We deployed VMs and K8s with the scripts and after that we deployed ONAP Frankfu
 ### Usage
 #### Set up environment variables for your target cloud.
 
-1.a You need to export cloud storage credential.
+1. You need to export cloud storage credential.
 For instance, if you use Google Storage bucket, you can download the credentials from Google UI or the command-line tool.
 Go to Google Cloud project's `IAM & Admin` menu and choose the service account associated with the storage.
 You can export the credential as a JSON formatted file.  Then
 `export GOOGLE_APPLICATION_CREDENTIALS=/path/to/credential-file`.
 Please, refer to the following [link](https://cloud.google.com/iam/docs/creating-managing-service-account-keys).
 
-Second, you need to export Openstack credentials. You can use the openstack.rc file downloaded from your Openstack project.
+2. you need to export Openstack credentials. You can use the openstack.rc file downloaded from your Openstack project.
 Please, refer to the following [link](https://docs.openstack.org/ocata/user-guide/common/cli-set-environment-variables-using-openstack-rc.html) for details.
+
+3. expose your KUBECONFIG environmental variable. kube_config_cluster.yaml file will be created under the stage directory. This file contains 
+the login credential for the new Kubernetes cluster.  
+
+4. check all the environmental variables are set with the `env` command.
+For example,
+```
+GOOGLE_APPLICATION_CREDENTIALS=/path/to/google_credential
+
+password=OpenstackPassowrd
+
+user_name=OpenstackUser
+
+auth_url=http://x.x.x.x:..
+
+project_id=12345667
+
+KUBECONFIG=/path/to/terragrunt/openlab/RegionOne/stage
+```
 
 #### Fill in files
  - `account.hcl`: Top-level configuration for a cloud account.
@@ -55,6 +77,9 @@ Then run `terragrunt apply-all` followed by `terraform init`
 Terraform version 0.13 is required.
 
 https://github.com/gruntwork-io/terragrunt-infrastructure-live-example#deploying-all-modules-in-a-region
+
+If you have multiple environments, you have to have a directory for it. Stage directory contains subdirectories for underlying infrastructure.
+You can simple copy the stage directory and paste it under RegionOne directory. If your cluster runs in a different region, you have to change the name of RegionOne into the region where your cluster runs.
 
 ####  Updating infrastructure version
 Infrastructure may evolve. You can use existing infrastructure as it is or updating the infrastructure to meet a new requirement.
