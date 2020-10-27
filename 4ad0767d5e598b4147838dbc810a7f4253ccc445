@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7cae1f4a_110eb785",
+        "filename": "terragrunt/openlab/RegionOne/stage/compute/control/terragrunt.hcl",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 4965
+      },
+      "writtenOn": "2020-10-27T17:37:25Z",
+      "side": 1,
+      "message": "why double /?",
+      "range": {
+        "startLine": 12,
+        "startChar": 64,
+        "endLine": 12,
+        "endChar": 66
+      },
+      "revId": "4ad0767d5e598b4147838dbc810a7f4253ccc445",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f60114eb_f4b7d05e",
+        "filename": "terragrunt/openlab/RegionOne/stage/env.hcl",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 4965
+      },
+      "writtenOn": "2020-10-27T17:37:25Z",
+      "side": 1,
+      "message": "I don\u0027t quite get this comment? Why are you pointing to external doc not to onap doc?",
+      "revId": "4ad0767d5e598b4147838dbc810a7f4253ccc445",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
