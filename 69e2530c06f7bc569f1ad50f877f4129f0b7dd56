@@ -1,0 +1,9 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Yoonsoon Jahng <yoonsoon.jahng@yoppworks.com>
+Code-Review+1: Neil Derraugh <neil.derraugh@yoppworks.com>
+Code-Review+2: Morgan Richomme <morgan.richomme@orange.com>
+Submitted-by: Morgan Richomme <morgan.richomme@orange.com>
+Submitted-at: Thu, 05 Nov 2020 08:23:56 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/integration/terraform/+/114284
+Project: integration/terraform
+Branch: refs/heads/master
