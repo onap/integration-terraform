@@ -1,0 +1,1 @@
+variable "concourse_enabled" {}

@@ -1,10 +1,10 @@
 provider "helm" {
-  version = "~> 0.10.0"
+  version = "~> 0.10.5"
   init_helm_home = true
   install_tiller = true
   service_account = var.service_account
   namespace    = var.namespace
-  tiller_image = "gcr.io/kubernetes-helm/tiller:v2.16.6"
+  tiller_image = "gcr.io/kubernetes-helm/tiller:v2.17.0"
 
   kubernetes {
     config_path = "${var.kubernetes_home}/kube_config_cluster.yaml"
@@ -12,8 +12,29 @@ provider "helm" {
 }
 
 provider "kubernetes" {
-  version = ">= 1.10"
+  version = ">= 1.13"
   load_config_file = true
+}
+
+# https://github.com/helm/charts/tree/master/stable/nfs-server-provisioner
+resource "helm_release" "nfs" {
+  count =  var.nfs_enabled ? 1 : 0
+
+
+  chart = "stable/nfs-server-provisioner"
+  name = "nfs"
+
+  set {
+    name = "storageClass.defaultClass"
+    value = "true"
+  }
+
+  set {
+    name = "storageClass.reclaimPolicy"
+    value = "Delete"
+  }
+
+  depends_on = [kubernetes_cluster_role_binding.tiller]
 }
 
 resource "kubernetes_service_account" "tiller" {
